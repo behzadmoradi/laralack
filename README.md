@@ -1,78 +1,52 @@
-<p align="center"><img src="https://res.cloudinary.com/dtfbvvkyp/image/upload/v1566331377/laravel-logolockup-cmyk-red.svg" width="400"></p>
+## About LaraLack
+LaraLack is an open-sourced clone of Slack 
 
-<p align="center">
-<a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/d/total.svg" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/v/stable.svg" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/license.svg" alt="License"></a>
-</p>
+## Requirements
+- PHP >= 7.2.5
+- MySQL >= 5.7
+- Git
+- Composer
+- NodeJS
+- Bootstrap 4
+- jQuery
 
-## About Laravel
+## Installation
+In order to install this repository on your local machine, first off make sure [Git](https://git-scm.com/downloads) is installed on your system then clone it through the following command:
+`$ git clone git@github.com:behzadmoradi/laralack.git`
+Next you need to install PHP dependencies; to do so, you need the [Composer](https://getcomposer.org/)  package manager. Go to the project directory and fetch dependencies via this command:
+`$ composer install`
+In order to install front-end dependencies, after making sure you have [NodeJS](https://nodejs.org/) installed on you machine, run the following command:
+`$ npm install`
+Make a copy of `.env.example` file located in the root of the project and call it `.env`. At the moment, the only thing that needs to be changed on this file is the name, username, and password of the database. Go to *phpmyadmin* and create a new database called *laralack* or whatever name you want then update the following section in `.env` file:
+`DB_CONNECTION=mysql`
+`DB_HOST=127.0.0.1`
+`DB_PORT=3306`
+`DB_DATABASE=laralack`
+`DB_USERNAME=root`
+`DB_PASSWORD=123456`
+Now you need to run the following Artisan command to create the required tables:
+`$ php artisan migrate`
+If successful, by going to *phpmyadmin* you can see that a couple of tables are created. Before using Laravel's encrypter, you must set a key option in your `config/app.php` configuration file; so
+as a final step in the installation process, do so by running `php artisan key:generate` command.
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
-
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
-
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
-
-## Learning Laravel
-
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
-
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 1500 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
-
-## Laravel Sponsors
-
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
-
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[British Software Development](https://www.britishsoftware.co)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- [UserInsights](https://userinsights.com)
-- [Fragrantica](https://www.fragrantica.com)
-- [SOFTonSOFA](https://softonsofa.com/)
-- [User10](https://user10.com)
-- [Soumettre.fr](https://soumettre.fr/)
-- [CodeBrisk](https://codebrisk.com)
-- [1Forge](https://1forge.com)
-- [TECPRESSO](https://tecpresso.co.jp/)
-- [Runtime Converter](http://runtimeconverter.com/)
-- [WebL'Agence](https://weblagence.com/)
-- [Invoice Ninja](https://www.invoiceninja.com)
-- [iMi digital](https://www.imi-digital.de/)
-- [Earthlink](https://www.earthlink.ro/)
-- [Steadfast Collective](https://steadfastcollective.com/)
-- [We Are The Robots Inc.](https://watr.mx/)
-- [Understand.io](https://www.understand.io/)
-- [Abdel Elrafa](https://abdelelrafa.com)
-- [Hyper Host](https://hyper.host)
-- [Appoly](https://www.appoly.co.uk)
-- [OP.GG](https://op.gg)
-
-## Contributing
-
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
-
-## Code of Conduct
-
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+## Usage
+To start using LaraLack, you need to run the following command in the terminal:
+`php artisan serve` and the server starts running at `http://127.0.0.1:8000` and by going to this url, you would see that the project is up and running!
+Before anything else, you **have to** make sure that [laravel-websockets](https://github.com/beyondcode/laravel-websockets) server is running; so create another terminal window and run the following command:
+`$ php artisan websockets:serve`
+By default, post number 6601 will be used for websockets.
+Now, simply go to `http://127.0.0.1:8000/register` and create a new user (In Incognito mode of your browser, create yet another user for testing purposes.). 
+After login, you need to choose a name and username for your account then click on the **plus** sign next to the "Channels" on the left sidebar to create a new channel.
+By clicking on the channel name, it appears on top of main section of the page with a down arrow. If you click on that arrow then "Invite people", you can send an invitation email to other users.
+For example, you can enter the email of the user you already created in Incognito window and if you refresh this page, the channel name that has already been created by the other user will show up.
+From now on, the two users can easily chat through the channel that is assigned to both of them.
+To start chatting one to one, click on the **plus** sign next to the "Direct Messages" on the left sidebar to create a direct chat with a specific user.
 
 ## Security Vulnerabilities
+If you discover a security vulnerability within this project, please send an e-mail to me via [me.behzad.moradi@gmail.com](mailto:me.behzad.moradi@gmail.com).
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+## Changelog
+Please see [CHANGELOG](https://github.com/behzadmoradi/laralack/blob/master/CHANGELOG) for more information what has changed recently.
 
 ## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+LaraLack is an open-sourced software licensed under the [MIT](https://opensource.org/licenses/MIT).
