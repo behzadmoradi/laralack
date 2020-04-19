@@ -12,7 +12,7 @@ LaraLack is an open-sourced clone of Slack
 
 ## Installation
 In order to install this repository on your local machine, first off make sure [Git](https://git-scm.com/downloads) is installed on your system then clone it through the following command:
-`$ git clone git@github.com:behzadmoradi/laralack.git`
+`$ git clone git@github.com:behzadmoradi/laralack.git`  
 Next you need to install PHP dependencies; to do so, you need the [Composer](https://getcomposer.org/)  package manager. Go to the project directory and fetch dependencies via this command:
 `$ composer install`
 In order to install front-end dependencies, after making sure you have [NodeJS](https://nodejs.org/) installed on you machine, run the following command:
