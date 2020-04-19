@@ -43,7 +43,7 @@ To start chatting one to one, click on the **plus** sign next to the "Direct Mes
 If you discover a security vulnerability within this project, please send an e-mail to me via [me.behzad.moradi@gmail.com](mailto:me.behzad.moradi@gmail.com).
 
 ## Changelog
-Please see [CHANGELOG](https://github.com/behzadmoradi/laralack/blob/master/CHANGELOG) for more information what has changed recently.
+Please see [CHANGELOG](https://github.com/behzadmoradi/laralack/blob/master/CHANGELOG.md) for more information what has changed recently.
 
 ## License
 LaraLack is an open-sourced software licensed under the [MIT](https://opensource.org/licenses/MIT).
