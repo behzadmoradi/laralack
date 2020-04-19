@@ -1,0 +1,30 @@
+.form-control {
+    border-radius: 0;
+}
+
+.form-control:focus {
+    box-shadow: none;
+    border-color: #ced4da;
+}
+
+.btn {
+    border-radius: 0;
+}
+
+.btn:focus {
+    box-shadow: none;
+}
+
+.modal-content {
+    border-radius: 0;
+}
+
+.custom-file-label {
+    border-radius: 0;
+}
+
+.custom-file-input:focus~.custom-file-label {
+    box-shadow: none;
+    border-color: #ced4da;
+}
+

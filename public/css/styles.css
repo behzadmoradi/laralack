@@ -1,0 +1,499 @@
+:root {
+  --purple: #460041;
+  --red: #e74c3c;
+}
+
+html {
+  height: 100%;
+  overflow: hidden;
+  touch-action: none;
+}
+
+body {
+  height: 100%;
+  overflow: hidden;
+  margin: 0px;
+  display: flex;
+}
+
+.error-msg {
+  color: var(--red);
+}
+
+.workspace-column {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+#workspace-left-sidebar .header {
+  flex-shrink: 0;
+}
+
+#workspace-main-content-container {
+  width: -webkit-fill-available;
+  margin: 2px 10px 2px 10px;
+}
+
+#workspace-main-content-container .header {
+  display: inline-flex;
+  flex-shrink: 0;
+  padding: 10px 10px 10px 0;
+  border-bottom: 2px solid gray;
+}
+
+#workspace-main-content-container #channel-name {
+  font-weight: bold;
+}
+
+#workspace-left-sidebar .content, #workspace-main-content-container .content {
+  flex-grow: 1;
+  overflow-y: auto;
+}
+
+#workspace-left-sidebar .direct-msg-user-wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+#workspace-left-sidebar .direct-msg-user-wrapper .new-msg-notification {
+  margin-right: 6px;
+  background: #f1c40f;
+  border-radius: 6px;
+  padding: 2px 4px 0px 4px;
+  margin-bottom: 2px;
+  font-size: 11px;
+  display: none;
+}
+
+#workspace-main-content-container #workspace-main-content #guide-wrapper {
+  text-align: center;
+  width: 500px;
+  margin: 0 auto;
+}
+
+#workspace-main-content-container #workspace-main-content #guide-wrapper h5 {
+  margin-top: 50px;
+  font-weight: bold;
+}
+
+#workspace-main-content-container #workspace-main-content #guide-wrapper #guide-description {
+  text-align: left;
+}
+
+#workspace-main-content-container #workspace-main-content #guide-wrapper ul {
+  list-style: none;
+  text-align: left;
+  padding: 0;
+}
+
+#workspace-main-content-container #workspace-main-content #guide-wrapper ul a:link {
+  text-decoration: none;
+}
+
+#workspace-main-content-container .header #channel-info-dropdown {
+  text-decoration: none;
+  cursor: pointer;
+  color: gray;
+}
+
+#workspace-main-content-container .header #channel-info-dropdown:hover {
+  color: #000;
+}
+
+#workspace-main-content-container .header #channel-info-dropdown:hover .fa-chevron-down {
+  color: #000;
+}
+
+#workspace-main-content-container .header #chat-info-dropdown {
+  text-decoration: none;
+  cursor: pointer;
+  color: gray;
+}
+
+#workspace-main-content-container .header #chat-info-dropdown:hover {
+  color: #000;
+}
+
+#workspace-main-content-container .header #chat-info-dropdown:hover .fa-chevron-down {
+  color: #000;
+}
+
+#workspace-main-content-container .header .fa-chevron-down {
+  color: gray;
+  font-size: 12px;
+}
+
+#workspace-left-sidebar {
+  background: var(--purple);
+  min-width: 220px;
+  overflow-y: auto;
+  top: 0;
+  bottom: 0;
+  padding: 16px;
+  color: #fff;
+  font-size: 14px;
+  flex-shrink: 0;
+}
+
+#workspace-left-sidebar a {
+  text-decoration: none;
+}
+
+#workspace-left-sidebar #username-container .dropdown-menu a:link {
+  color: #fff;
+  text-decoration: none;
+}
+
+#workspace-left-sidebar #username-container .dropdown-menu a:active {
+  color: #000;
+  text-decoration: none;
+  background-color: #fff;
+}
+
+#workspace-main-content-container .dropdown-menu a:active {
+  color: #000;
+  text-decoration: none;
+  background-color: #fff;
+}
+
+#workspace-main-content-container .dropdown-menu button:active {
+  color: #000;
+  text-decoration: none;
+  background-color: #fff;
+}
+
+#workspace-main-content-container .dropdown-menu button:focus {
+  outline: none;
+  background-color: #fff;
+}
+
+#workspace-left-sidebar #username-container #user-info-dropdown {
+  color: #fff;
+}
+
+#workspace-left-sidebar #username-container #username:hover+.fa-chevron-down {
+  color: rgb(207, 195, 207);
+}
+
+#workspace-left-sidebar #username-container #user-info-dropdown .fa-chevron-down {
+  color: gray;
+}
+
+#workspace-left-sidebar #username-container #user-info-dropdown .fa-chevron-down:hover {
+  color: rgb(207, 195, 207);
+}
+
+#workspace-left-sidebar #username-container .fa-circle {
+  color: #2ecc71;
+  font-size: 10px;
+  margin-bottom: 2px;
+}
+
+#workspace-left-sidebar #workspace-left-sidebar-content #direct-msg-container .online .fa-circle {
+  color: #2ecc71;
+  font-size: 10px;
+  margin-bottom: 2px;
+}
+
+/* #workspace-left-sidebar #workspace-left-sidebar-content #direct-msg-container .active .fa-circle {
+  color: #2ecc71;
+  font-size: 10px;
+  margin-bottom: 2px;
+} */
+
+#workspace-left-sidebar #workspace-left-sidebar-content #direct-msg-container .fa-circle {
+  font-size: 10px;
+  margin-bottom: 2px;
+}
+
+#workspace-left-sidebar #title-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+#workspace-left-sidebar #title-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+#workspace-left-sidebar #title-container a:visited {
+  color: gray;
+}
+
+#workspace-left-sidebar #title-container a:link {
+  color: gray;
+}
+
+#workspace-left-sidebar #title-container a:hover {
+  color: rgb(207, 195, 207);
+}
+
+#workspace-left-sidebar #workspace-left-sidebar-content #channels-container, #workspace-left-sidebar #workspace-left-sidebar-content #direct-msg-container {
+  margin-top: 20px;
+}
+
+#workspace-left-sidebar #workspace-left-sidebar-content #channels-container a {
+  margin-right: 8px;
+}
+
+#workspace-left-sidebar #workspace-left-sidebar-content #direct-msg-container a {
+  margin-right: 8px;
+}
+
+#workspace-left-sidebar #workspace-left-sidebar-content #channels-container .channel-title-sidebar {
+  color: gray;
+  display: block;
+  font-size: 14px;
+  padding: 0;
+  max-width: 180px;
+  text-align: left;
+}
+
+#workspace-left-sidebar #workspace-left-sidebar-content #channels-container .channel-title-sidebar:hover {
+  color: rgb(207, 195, 207);
+  text-decoration: none;
+}
+
+#workspace-left-sidebar #workspace-left-sidebar-content #channels-container .channel-title-sidebar.active {
+  color: rgb(207, 195, 207);
+  text-decoration: none;
+}
+
+#workspace-left-sidebar #workspace-left-sidebar-content #direct-msg-container .direct-msg-user {
+  color: gray;
+  font-size: 14px;
+  padding: 0;
+}
+
+#workspace-left-sidebar #workspace-left-sidebar-content #direct-msg-container .direct-msg-user.active {
+  color: rgb(207, 195, 207);
+}
+
+#workspace-left-sidebar #workspace-left-sidebar-content #direct-msg-container .direct-msg-user:hover {
+  color: rgb(207, 195, 207);
+  text-decoration: none;
+}
+
+#workspace-left-sidebar #workspace-left-sidebar-content #direct-msg-container .direct-msg-user.active {
+  color: rgb(207, 195, 207);
+  text-decoration: none;
+}
+
+#workspace-left-sidebar #workspace-left-sidebar-content #direct-msg-container .direct-msg-user:focus {
+  text-decoration: none;
+}
+
+#workspace-main-content {
+  max-height: 550px;
+  overflow: auto;
+}
+
+#workspace-left-sidebar-content {
+  max-height: 550px;
+  overflow: auto;
+}
+
+#update-profile-modal #update-profile-btn {
+  float: right;
+}
+
+#update-profile-modal #profile-avatar-wrapper {
+  width: inherit;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  max-height: 180px;
+}
+
+#update-profile-modal #avatar-update-success-msg {
+  color: #27ae60;
+}
+
+#update-profile-form .spinner-border {
+  display: none;
+}
+
+#channel-modal .spinner-border {
+  display: none;
+}
+
+#send-invitations-btn .spinner-border {
+  display: none;
+}
+
+#delete-chat-modal .spinner-border {
+  display: none;
+}
+
+#invite-people-modal-users-list .invitee-delete-btn-wrapper .spinner-border {
+  margin-top: 10px;
+  margin-left: 12px;
+}
+
+#invite-people-modal #send-invitations-btn {
+  float: right;
+}
+
+#delete-channel-modal .spinner-border {
+  display: none;
+}
+
+#update-profile-form #update-form-success-msg {
+  color: #27ae60;
+}
+
+#delete-channel-modal #channel-modal-delete-success-msg {
+  color: #27ae60;
+}
+
+#delete-chat-modal #delete-chat-modal-success-msg {
+  color: #27ae60;
+}
+
+#delete-chat-modal #delete-chat-modal-error-msg {
+  color: var(--red);
+}
+
+#delete-channel-modal #channel-modal-delete-error-msg {
+  color: var(--red);
+}
+
+#channel-modal #channel-modal-success-msg {
+  color: #27ae60;
+}
+
+.optional-text {
+  color: gray;
+}
+
+#channel-modal #submit-channel-btn {
+  float: right;
+}
+
+#workspace-main-content #channel-info-wrapper {
+  margin-top: 10px;
+}
+
+#workspace-main-content #channel-info-wrapper h4 {
+  font-weight: bold;
+  display: inline;
+}
+
+#delete-channel-modal #delete-channel-btn {
+  float: right;
+}
+
+#delete-chat-modal #delete-chat-modal-btn {
+  float: right;
+}
+
+#channel-info-wrapper {
+  margin-bottom: 20px;
+}
+
+.message-wrapper img {
+  width: 35px;
+  height: 35px;
+  border-radius: 3px;
+}
+
+.message-wrapper .media-body {
+  margin-top: -5px;
+}
+
+#msg-from {
+  display: none;
+}
+
+#msg-from .form-group {
+  margin-bottom: 0;
+}
+
+#invite-people-modal #add-another-email {
+  padding-left: 0;
+  text-decoration: none;
+}
+
+#invite-people-modal #invite-people-modal-success-msg {
+  color: #27ae60;
+}
+
+#invite-people-modal #invite-people-modal-error-msg {
+  color: var(--red);
+}
+
+#invite-people-modal #invite-people-modal-add-new-users-heading {
+  margin-top: 10px;
+}
+
+#invite-people-modal #invite-people-modal-users-list .form-row {
+  height: 25px;
+}
+
+#invite-people-modal #invite-people-modal-users-list .form-row .col-md-1 {
+  margin-top: -5px;
+}
+
+#invite-people-modal #invite-people-modal-users-list .form-row:hover {
+  background: #f6f6f6;
+}
+
+#invite-people-modal #invitee-list-empty {
+  display: none;
+}
+
+#chat-invitation-modal #chat-invitation-modal-recipients-wrapper .form-row {
+  height: 25px;
+}
+
+#chat-invitation-modal #chat-invitation-modal-recipients-wrapper .form-row .col-md-1 {
+  margin-top: -5px;
+}
+
+#chat-invitation-modal #chat-invitation-modal-recipients-wrapper .form-row:hover {
+  background: #f6f6f6;
+}
+
+#chat-invitation-modal #chat-invitation-modal-recipients-wrapper .green-check {
+  cursor: auto;
+  color: #27ae60;
+}
+
+#chat-invitation-modal #chat-invitation-modal-body-txt {
+  margin-bottom: 10px;
+}
+
+#chat-invitation-modal .form-row .spinner-border {
+  margin-top: 10px;
+  margin-left: 12px;
+}
+
+#messages-wrapper {
+  min-height: 24px;
+}
+
+#is-typing {
+  display: none;
+}
+
+@keyframes blink {
+  50% {
+    color: transparent
+  }
+}
+
+#is-typing .loader-dot {
+  animation: 1s blink infinite
+}
+
+#is-typing .loader-dot:nth-child(2) {
+  animation-delay: 250ms
+}
+
+#is-typing .loader-dot:nth-child(3) {
+  animation-delay: 500ms
+}
+
+#poke-user-btn .spinner-border {
+  display: none;
+}
