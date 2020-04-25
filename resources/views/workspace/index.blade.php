@@ -63,9 +63,8 @@
                     You can use the following links to get to know how to get most out of this system:
                 </div>
                 <ul>
-                    <li><a href="https://lab.lepture.com/editor/markdown" rel="nofollow" target="_blank">How to use markdown</a></li>
-                    <li><a href="#" target="_blank">How to create a new channel</a></li>
-                    <li><a href="#" target="_blank">How to add users to a channel</a></li>
+                    <li><a href="/help" target="_blank">How to use LaraLack</a></li>
+                    <li><a href="/markdown-guide" target="_blank">How to use markdown</a></li>
                 </ul>
             </div>
             <div id="all-messages-wrapper" data-status="false"></div>

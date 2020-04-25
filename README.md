@@ -42,12 +42,11 @@ To start chatting one to one, click on the **plus** sign next to the "Direct Mes
 ## Screenshots 
 This image shows the popup for choosing a name and username:  
 ![LaraLack](https://github.com/behzadmoradi/laralack/blob/master/public/img/guides/01.png?raw=true)  
-
 This image shows the popup for adding a new channel:  
 ![LaraLack](https://github.com/behzadmoradi/laralack/blob/master/public/img/guides/02.png?raw=true)  
 This image shows the popup for inviting people to a channel:  
 ![LaraLack](https://github.com/behzadmoradi/laralack/blob/master/public/img/guides/03.png?raw=true)  
-This image shows the popup for creating a chat room with a specific user:  
+This image shows the popup for creating a chat room for a specific user:  
 ![LaraLack](https://github.com/behzadmoradi/laralack/blob/master/public/img/guides/04.png?raw=true)  
 This image shows the chat history for a specific user:  
 ![LaraLack](https://github.com/behzadmoradi/laralack/blob/master/public/img/guides/05.png?raw=true)  

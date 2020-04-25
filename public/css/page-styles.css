@@ -1,5 +1,10 @@
-body {
+/* body {
     font-family: 'Nunito', sans-serif;
     width: 960px;
     margin: 0 auto;
+} */
+
+#help-images-wrapper img {
+    margin-bottom: 20px;
+    border: 1px solid;
 }

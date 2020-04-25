@@ -17,4 +17,9 @@ class GeneralController extends Controller
     {
         return view('pages.markdown');
     }
+
+    public function help()
+    {
+        return view('pages.help');
+    }
 }

@@ -1,7 +1,9 @@
 @extends('layouts.page')
 @section('pageTitle', 'Markdown Guide')
 @section('content')
-<div class="yue">
+<div class="container">
+    <div class="row">
+        <div class="col-lg-12" id="help-images-wrapper">
     <h1 class="entry-title">Markdown</h1>
 
     <hr />
@@ -206,5 +208,7 @@ like `` `this` ``.
     <pre><code>Roses are red, [space][space]
 Violets are blue. [space][space]
 </code></pre>
+</div>
+</div>
 </div>
 @endsection
