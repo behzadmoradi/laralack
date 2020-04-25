@@ -3,7 +3,7 @@
 @section('content')
 <div class="container">
     <div class="row">
-        <div class="col-lg-12" id="help-images-wrapper">
+        <div class="col-lg-12" id="help-images-wrapper"> 
             <h1>Screenshots</h1>
             This image shows the popup for choosing a name and username:  
             <img src="/img/guides/01.png" class="img-fluid" alt="LaraLack help">
