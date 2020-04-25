@@ -71,24 +71,16 @@
                         <a href="{{ url('/home') }}">Home</a>
                     @else
                         <a href="{{ route('login') }}">Login</a>
-
                         @if (Route::has('register'))
                             <a href="{{ route('register') }}">Register</a>
                         @endif
                     @endauth
                 </div>
             @endif
-
             <div class="content">
-                <div class="title m-b-md">
-                    LaraLack
-                </div>
-                <div>
-                    An opensource Slack clone based on Laravel framework.
-                </div>
-                <div class="links">
-                    <a href="https://github.com/laravel/laravel">GitHub</a>
-                </div>
+                <div class="title m-b-md">LaraLack</div>
+                <div>An open-sourced Slack clone based on Laravel framework.</div>
+                <div class="links"><a href="https://github.com/behzadmoradi/laralack">GitHub</a></div>
             </div>
         </div>
     </body>

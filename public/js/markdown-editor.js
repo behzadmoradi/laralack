@@ -7141,7 +7141,7 @@
     //   {name: 'image', action: drawImage},
     //   '|',
     
-      {name: 'info', action: 'http://lab.lepture.com/editor/markdown'},
+      {name: 'info', action: '/markdown-guide'},
       {name: 'preview', action: togglePreview},
       // {name: 'fullscreen', action: toggleFullScreen}
     ];

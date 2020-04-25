@@ -39,11 +39,25 @@ By clicking on the channel name, it appears on top of main section of the page w
 For example, you can enter the email of the user you already created in Incognito window and if you refresh this page, the channel name that has already been created by the other user will show up. From now on, the two users can easily chat through the channel that is assigned to both of them.  
 To start chatting one to one, click on the **plus** sign next to the "Direct Messages" on the left sidebar to create a direct chat with a specific user.
 
-## Security Vulnerabilities
-If you discover a security vulnerability within this project, please send an e-mail to me via [me.behzad.moradi@gmail.com](mailto:me.behzad.moradi@gmail.com).
+## Screenshots 
+This image shows the popup for choosing a name and username:  
+<img src="https://github.com/behzadmoradi/laralack/blob/master/public/img/avatars/guides/01.png">  
+This image shows the popup for adding a new channel:  
+<img src="https://github.com/behzadmoradi/laralack/blob/master/public/img/avatars/guides/02.png">  
+This image shows the popup for inviting people to a channel:  
+<img src="https://github.com/behzadmoradi/laralack/blob/master/public/img/avatars/guides/03.png">  
+This image shows the popup for creating a chat room with a specific user:  
+<img src="https://github.com/behzadmoradi/laralack/blob/master/public/img/avatars/guides/04.png">  
+This image shows the chat history for a specific user:  
+<img src="https://github.com/behzadmoradi/laralack/blob/master/public/img/avatars/guides/05.png">  
+This image shows the number of unread messages from another user:  
+<img src="https://github.com/behzadmoradi/laralack/blob/master/public/img/avatars/guides/06.png">  
+
+## Issues
+If you discover any issue within this project, please send an e-mail to me via [me.behzad.moradi@gmail.com](mailto:me.behzad.moradi@gmail.com).
 
 ## Changelog
 Please see [CHANGELOG](https://github.com/behzadmoradi/laralack/blob/master/CHANGELOG.md) for more information what has changed recently.
 
 ## License
-LaraLack is an open-sourced software licensed under the [MIT](https://opensource.org/licenses/MIT).
+LaraLack is an open-sourced software licensed under the [MIT](https://opensource.org/licenses/MIT).  

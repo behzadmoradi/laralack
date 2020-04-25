@@ -7,7 +7,6 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <title>{{ config('app.name', 'Laravel') }}</title>
     <!-- Scripts -->
-    <!-- <script src="{{ asset('js/app.js') }}" defer></script> -->
     <script src="{{ asset('js/pusher.js') }}" defer></script>
     <script src="js/jquery-3.4.1.min.js"></script>
     <script src="js/jquery.scrollbar.min.js"></script>
@@ -16,7 +15,6 @@
     <script src="js/markdown-editor.js" defer></script>
     <script src="js/markdown-editor-parser.js" defer></script>
     <script src="js/api/api.js"></script>
-    <!-- <script src="js/jquery.slimscroll.min.js"></script> -->
     <script src="js/api/profile.js" defer></script>
     <script src="js/api/channel.js" defer></script>
     <script src="js/api/invitation.js" defer></script>
@@ -29,7 +27,6 @@
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
     <!-- Styles -->
-    <!-- <link href="{{ asset('css/app.css') }}" rel="stylesheet"> -->
     <link href="{{ asset('css/bootstrap.min.css') }}" rel="stylesheet">
     <link href="{{ asset('css/bootstrap-overrides.css') }}" rel="stylesheet">
     <link href="{{ asset('css/styles.css') }}" rel="stylesheet">
@@ -37,21 +34,11 @@
     <link href="{{ asset('css/markdown-editor.css') }}" rel="stylesheet">
     <link href="{{ asset('css/custom-scrollbar.css') }}" rel="stylesheet">
 </head>
-
 <script>
     $(document).ready(function() {
         $('.custom-scrollbar').scrollbar();
         $('.toast').toast('show');
         bsCustomFileInput.init();
-
-
-        // https://github.com/rochal/jQuery-slimScroll
-        // $('.custom-scrollbar').slimscroll({
-        //     height: 'auto'
-        // }).parent().css({
-        //     'float': 'left',
-        //     'margin-right': '0px'
-        // });
     });
 </script>
 <body>

@@ -95,7 +95,8 @@
                 $('#update-profile-modal').modal();
             }
 
-            // https://github.com/lepture/editor another one: https://simplemde.com/
+            // https://github.com/lepture/editor 
+            // https://simplemde.com is another markdown plugin that can be used
             var editor = new Editor({
                 element: document.getElementById('form-message-input'),
                 status: false,
