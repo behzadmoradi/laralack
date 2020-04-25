@@ -41,7 +41,8 @@ To start chatting one to one, click on the **plus** sign next to the "Direct Mes
 
 ## Screenshots 
 This image shows the popup for choosing a name and username:  
-<img src="https://github.com/behzadmoradi/laralack/blob/master/public/img/avatars/guides/01.png">  
+![LaraLack](https://github.com/behzadmoradi/laralack/blob/master/public/img/guides/01.png?raw=true)
+
 This image shows the popup for adding a new channel:  
 <img src="https://github.com/behzadmoradi/laralack/blob/master/public/img/avatars/guides/02.png">  
 This image shows the popup for inviting people to a channel:  
