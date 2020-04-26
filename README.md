@@ -27,6 +27,19 @@ Make a copy of `.env.example` file located in the root of the project and call i
 Now you need to run the following Artisan command to create the required tables:  
 `$ php artisan migrate`  
 If successful, by going to *phpmyadmin* you can see that a couple of tables are created. Before using Laravel's encrypter, you must set a key option in your `config/app.php` configuration file; so as a final step in the installation process, do so by running `php artisan key:generate` command.
+Another thing that needs to be updated in `.env` file is mail service setup. Services like [Mailgun](https://www.mailgun.com/), [SendGrid](https://sendgrid.com/), [Spark](https://sparkmailapp.com/) etc, provide developers APIs to send email through their application and Laravel supports all of them. After registration in one of those, the site provides you with a couple of credentials that must be added to the following section:
+`MAIL_MAILER=smtp`  
+`MAIL_HOST=smtp.sendgrid.net`  
+`MAIL_PORT=587`  
+`MAIL_USERNAME=apikey`  
+`MAIL_PASSWORD=SG.ACzXAZcPQkiesBluRYAbYQ.5lQ4Tv7KIU3KkxIdQMg1j86khEl2ZJFc`
+`MAIL_ENCRYPTION=null`  
+`MAIL_FROM_ADDRESS=hi@example.com`  
+`MAIL_FROM_NAME="${APP_NAME}"`  
+From now on, the only other thing in this process is setting up a CRON JOB on your Linux server to run the following command every minute of two:  
+`* * * * * cd /path-to-your-project && php artisan schedule:run >> /dev/null 2>&1`  
+Laravel Scheduler takes care of the rest and runs the required jobs of the project.  
+
 
 ## Usage
 To start using LaraLack, you need to run `php artisan serve` command in the terminal and the server starts running at `http://127.0.0.1:8000` and by going to this url, you would see that the project is up and running!  
