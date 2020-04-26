@@ -38,8 +38,8 @@ Another thing that needs to be updated in the `.env` file is mail service setup.
 `MAIL_FROM_NAME="${APP_NAME}"`  
 From now on, the only other thing in this process is setting up a CRON JOB on your Linux server to run the following command every minute of two:  
 `* * * * * cd /path-to-your-project && php artisan schedule:run >> /dev/null 2>&1`  
-Laravel Scheduler takes care of the rest and runs the required jobs of the project; for example, by inviting people to a channel, new records will be added to the `invitations` table and when the CRON JOB runs, those records with zero value for the `is_send` column will be selected and an invitation email will be sent to whatever value is stored in `email` column.  
-
+Laravel Scheduler takes care of the rest and runs the required jobs of the project; for example, by inviting people to a channel, new records will be added to the `invitations` table and when the CRON JOB runs, those records with zero value for the `is_sent` column will be selected and an invitation email will be sent to whatever value is stored in `email` column.  
+Also keep in mind that on you local machine and for testing purposes, you can just open a new termianl window, go to the project`s directory and run `php artisan schedule:run` command.  
 
 ## Usage
 To start using LaraLack, you need to run `php artisan serve` command in the terminal and the server starts running at `http://127.0.0.1:8000` and by going to this url, you would see that the project is up and running!  
