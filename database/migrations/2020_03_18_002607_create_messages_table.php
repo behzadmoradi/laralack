@@ -20,8 +20,7 @@ class CreateMessagesTable extends Migration
             $table->index(['channel_id']);
             $table->integer('parent_id')->default(0);
             $table->text('message');
-            $table->timestamp('created_at')->useCurrent();
-            $table->timestamp('updated_at')->default(DB::raw('CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP'));
+            $table->timestamps();
         });
     }
 

@@ -22,8 +22,8 @@ class CreateChatsTable extends Migration
             $table->text('message');
             $table->integer('is_seen')->default(0);
             $table->integer('reminder_sent')->default(0);
-            $table->timestamp('created_at')->useCurrent();
-            $table->timestamp('updated_at')->default(DB::raw('CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP'));
+            $table->timestamps();
+
         });
     }
 
