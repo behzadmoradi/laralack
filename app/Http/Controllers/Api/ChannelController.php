@@ -108,7 +108,6 @@ class ChannelController extends Controller
             }
             $channel->name = $this->clean($validData['name']);
             $channel->user_id = Auth::user()->id;
-            $channel->updated_at = null;
             $channel->save();
             $newlyAddedChannel = $channel->refresh();
             if ($newlyAddedChannel) {
