@@ -2,10 +2,10 @@ function setApiUriAndToken(uri, userInfo) {
     var json = $.parseJSON(userInfo);
     baseUrl = uri;
     securityToken = json['api_token'];
-    userAuthorizedId = json['id'];    
+    userAuthorizedId = json['id'];
 }
 
-function get(url, successHandler = null, errorHander = null, data = null, cache = false, dataType = 'json') {
+function get(url, successHandler = null, errorHandler = null, data = null, cache = false, dataType = 'json') {
     $.ajax({
         url: baseUrl + url,
         method: "GET",
@@ -23,14 +23,14 @@ function get(url, successHandler = null, errorHander = null, data = null, cache 
             }
         },
         error: function (data) {
-            if (errorHander) {
-                errorHander(data);
+            if (errorHandler) {
+                errorHandler(data);
             }
         }
     });
 }
 
-function post(url, successHandler = null, errorHander = null, data = null, cache = false, dataType = 'json') {
+function post(url, successHandler = null, errorHandler = null, data = null, cache = false, dataType = 'json') {
     $.ajax({
         url: baseUrl + url,
         method: "POST",
@@ -49,14 +49,14 @@ function post(url, successHandler = null, errorHander = null, data = null, cache
             }
         },
         error: function (data) {
-            if (errorHander) {
-                errorHander(data);
+            if (errorHandler) {
+                errorHandler(data);
             }
         }
     });
 }
 
-function put(url, successHandler = null, errorHander = null, data = null, cache = false, dataType = 'json') {
+function put(url, successHandler = null, errorHandler = null, data = null, cache = false, dataType = 'json') {
     $.ajax({
         url: baseUrl + url,
         method: "PUT",
@@ -79,14 +79,14 @@ function put(url, successHandler = null, errorHander = null, data = null, cache 
             }
         },
         error: function (data) {
-            if (errorHander) {
-                errorHander(data);
+            if (errorHandler) {
+                errorHandler(data);
             }
         }
     });
 }
 
-function del(url, successHandler = null, errorHander = null, data = null, cache = false, dataType = 'json') {
+function del(url, successHandler = null, errorHandler = null, data = null, cache = false, dataType = 'json') {
     $.ajax({
         url: baseUrl + url,
         method: "DELETE",
@@ -104,8 +104,8 @@ function del(url, successHandler = null, errorHander = null, data = null, cache 
             }
         },
         error: function (data) {
-            if (errorHander) {
-                errorHander(data);
+            if (errorHandler) {
+                errorHandler(data);
             }
         }
     });
