@@ -18,17 +18,5 @@ class UsersTableSeeder extends Seeder
             'password' => Hash::make('ffffffff'),
             'api_token' => Str::random(80),
         ]);
-
-        DB::table('users')->insert([
-            'email' => 'behzad@surgelearning.ca',
-            'password' => Hash::make('ffffffff'),
-            'api_token' => Str::random(80),
-        ]);
-
-        DB::table('users')->insert([
-            'email' => 'user3@gmail.com',
-            'password' => Hash::make('ffffffff'),
-            'api_token' => Str::random(80),
-        ]);
     }
 }

@@ -91,8 +91,15 @@
             setApiUriAndToken('<?= config('app.api_url') ?>', '<?= Auth::user() ?>');
 
             if ((authName == '') || (authUsername == '')) {
-                $('#update-profile-modal').modal();
+                $('#update-profile-modal').modal({
+                    backdrop: 'static', 
+                    keyboard: false
+                });
+            } else {
+                $('#close-multiplication-sign').css('display', 'block');
             }
+
+        
 
             // https://github.com/lepture/editor 
             // https://simplemde.com is another markdown plugin that can be used

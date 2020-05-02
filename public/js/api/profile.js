@@ -1,4 +1,10 @@
 function updateProfileSuccess(data) {
+    $(document).click(function (event) {
+        if (!$(event.target).closest(".modal-content").length) {
+            $('#update-profile-modal').modal('hide');
+        }
+    });
+    $('#close-multiplication-sign').css('display', 'block');
     $('#update-profile-btn .spinner-border').css('display', 'none');
     $("#update-profile-form :input").attr('disabled', true);
     $('#update-profile-btn').html('Updated' + ' <i class="fas fa-check"></i>');

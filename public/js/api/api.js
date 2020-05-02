@@ -61,7 +61,6 @@ function put(url, successHandler = null, errorHandler = null, data = null, cache
         url: baseUrl + url,
         method: "PUT",
         contentType: "application/json; charset=utf-8",
-
         data: data,
         dataType: dataType,
         cache: cache,

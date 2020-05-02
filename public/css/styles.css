@@ -308,6 +308,10 @@ body {
   color: #27ae60;
 }
 
+#update-profile-modal #close-multiplication-sign {
+  display: none;
+}
+
 #update-profile-form .spinner-border {
   display: none;
 }
