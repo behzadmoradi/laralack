@@ -3,6 +3,7 @@
 /public/storage
 /public/img/avatars/2020
 /public/docs
+/public/assets
 /storage/*.key
 /vendor
 .env
