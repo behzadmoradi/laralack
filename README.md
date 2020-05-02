@@ -1,5 +1,6 @@
+<p align="center">
 ![LaraLack](https://github.com/behzadmoradi/laralack/blob/master/public/img/logos/logo.png?raw=true)  
-
+</p>
 ## About LaraLack
 LaraLack is an open-sourced clone of Slack 
 
