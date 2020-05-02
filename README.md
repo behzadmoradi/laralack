@@ -1,4 +1,4 @@
-![LaraLack](https://github.com/behzadmoradi/laralack/blob/master/public/img/logos/logo.png?raw=true){ width="auto" height="200" style="display: block; margin: 0 auto" }  
+![LaraLack](https://github.com/behzadmoradi/laralack/blob/master/public/img/logos/logo.png?raw=true)    
 
 ## About LaraLack
 LaraLack is an open-sourced clone of Slack 
