@@ -90,6 +90,7 @@ class ChatController extends Controller
         } else {
             $allChannels = User::find($userId)->channels()->get();
             if (count($allChannels) > 0) {
+                $users = [];
                 foreach ($allChannels as $channel) {
                     foreach (Channel::find($channel->id)->users()->where('id', '<>', $userId)->select('id', 'email', 'username', 'name')->get() as $user) {
                         $users[] = $user;

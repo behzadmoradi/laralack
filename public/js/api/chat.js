@@ -51,6 +51,7 @@ function fetchChats() {
 }
 
 function fetchRecipientsSuccess(data) {
+    console.log('fd');
     $('#chat-invitation-modal-recipients-wrapper').empty();
     var usersTemplate = '';
     if (data['data']['status_code'] == 200 && data['data']['users'].length > 0) {

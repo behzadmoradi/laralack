@@ -1,3 +1,5 @@
+## v0.0.5 - May 02, 2020
+-  Bug removed in ChatController
 ## v0.0.4 - Apr 26, 2020
 -  Drop-down text not visible in workspace-left-sidebar issue resolved
 ## v0.0.3 - Apr 25, 2020
