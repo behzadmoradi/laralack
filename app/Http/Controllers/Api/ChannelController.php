@@ -21,39 +21,30 @@ class ChannelController extends Controller
             return $this->jsonResponse([
                 'message' => 'Not Acceptable',
             ], 406, false);
-        } else {
-            $allChannels = User::find($userId)->channels()->orderBy('id', 'DESC')->get();
-            return $this->jsonResponse([
-                'channels' => $allChannels,
-            ]);
         }
+        $allChannels = User::find($userId)->channels()->orderBy('id', 'DESC')->get();
+        return $this->jsonResponse([
+            'channels' => $allChannels,
+        ]);
     }
 
     public function showUsersByChannelId(int $channelId)
     {
-        $notAllowed = null;
         $channelById = Channel::find($this->clean($channelId));
-        if ($channelById) {
-            if ($channelById->user_id == Auth::user()->id) {
-                $usersByChannelId = $channelById->users()
-                    ->where('id', '<>', Auth::user()->id)
-                    ->orderBy('id', 'DESC')
-                    ->get();
-                return $this->jsonResponse([
-                    'channel_id' => $channelId,
-                    'users' => $usersByChannelId,
-                ]);
-            } else {
-                $notAllowed = true;
-            }
-        } else {
-            $notAllowed = true;
-        }
-        if ($notAllowed) {
+        if (!$channelById || ($channelById->user_id != Auth::user()->id)) {
             return $this->jsonResponse([
                 'message' => 'Forbidden',
             ], 403, false);
         }
+        
+        $usersByChannelId = $channelById->users()
+                ->where('id', '<>', Auth::user()->id)
+                ->orderBy('id', 'DESC')
+                ->get();
+        return $this->jsonResponse([
+            'channel_id' => $channelId,
+            'users' => $usersByChannelId,
+        ]);
     }
 
     public function deleteChannelMember(int $channelId, int $userId)
