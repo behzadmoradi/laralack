@@ -36,11 +36,10 @@ class ChannelController extends Controller
                 'message' => 'Forbidden',
             ], 403, false);
         }
-        
         $usersByChannelId = $channelById->users()
-                ->where('id', '<>', Auth::user()->id)
-                ->orderBy('id', 'DESC')
-                ->get();
+            ->where('id', '<>', Auth::user()->id)
+            ->orderBy('id', 'DESC')
+            ->get();
         return $this->jsonResponse([
             'channel_id' => $channelId,
             'users' => $usersByChannelId,
